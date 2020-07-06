@@ -110,6 +110,18 @@ ENV SONAR_SCANNER_HOME=/opt/sonar_scanner/bin
 
 ENV PATH=$SONAR_SCANNER_HOME:$PATH
 
+### APPCENET ###
+
+RUN npm install -g appcenter-cli
+
+COPY appcenter_deploy.sh /opt/appcenter_deploy.sh
+
+RUN chmod +x /opt/appcenter_deploy.sh
+
+COPY appcenter_run_test.sh /opt/appcenter_run_test.sh
+
+RUN chmod +x /opt/appcenter_run_test.sh
+
 
 
 WORKDIR /root/codigo_aplicacao/
