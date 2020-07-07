@@ -2,8 +2,8 @@
 
 appcenter distribute release \
         --group Collaborators \
-        --file "app/build/outputs/apk/debug/app-debug.apk" \
+        --file ${APPCENTER_PATH_APK} \
         --release-notes 'Versao gerada pelo Jenkins Automatica' \
-        --app nome_loja-gmail.com/Bitcoin-Calculator \
-        --token ${TOKEN_APPCENTER} \
+        --app ${APPCENTER_NAME_APP} \
+        --token ${APPCENTER_TOKEN} \
         --quiet
